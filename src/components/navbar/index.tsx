@@ -1,19 +1,38 @@
+import { FirstAid, ShoppingCart, User } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
+
+
 function Navbar() {
- 
     return (
-      <>
-       <div className='w-full bg-indigo-900 text-white flex justify-center py-4'>
-            <div className="container flex justify-between text-lg">
-              <div className='text-2xl font-bold uppercase'>Farmácia Generation</div>
-  
-              <div className='flex gap-4'>
-                <div className='hover:underline'>Categorias</div>
-                <div className='hover:underline'>Sair</div>
-              </div>
+             
+        <div className='
+            w-full 
+            bg-slate-800  
+            text-white 
+            flex 
+            justify-center 
+            py-4
+        '>
+            <div className="
+                container 
+                flex 
+                justify-between 
+                text-lg
+            ">
+                <Link to='/home'>
+                    <FirstAid size={32}
+                    />
+                </Link>
+
+        
+            <div className='flex gap-4 py-4'>
+                <Link to='/categorias' className='hover:underline'>Categorias</Link>
+                <Link to='/cadcategoria' className='hover:underline'>Cadastrar Categoria</Link>
+                <User size={32} weight='bold' />
+                <ShoppingCart size={32} weight='bold' />
             </div>
-          </div>
-      </>
-    )
-  }
-  
-  export default Navbar;
+            </div>
+            </div>
+                )
+}
+export default Navbar;
