@@ -1,7 +1,7 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {  BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import FormCategoria from './components/categorias/FormCategoria';
-import ListarCategorias from './components/categorias/ListaCategorias';
+import ListarCategorias from './components/categorias/ListarCategorias';
 import Footer from './components/footer';
 import Navbar from './components/navbar';
 import Home from './paginas/home';
@@ -12,8 +12,9 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Navbar />
+           <BrowserRouter>
+           <Navbar />
+             
         <div className='min-h-[90vh] bg-gray-200'>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -25,7 +26,7 @@ function App() {
             </Routes>
         </div>
         <Footer />
-      </BrowserRouter>
+        </BrowserRouter>
     </>
   );
 }

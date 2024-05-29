@@ -19,10 +19,7 @@ function Navbar() {
                 justify-between 
                 text-lg
             ">
-                <Link to='/home'>
-                    <FirstAid size={32}
-                    />
-                </Link>
+                <Link to='/home'><FirstAid size={48} color="#ff3838" weight="bold" /></Link>
 
         
             <div className='flex gap-4 py-4'>
